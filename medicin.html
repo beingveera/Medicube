@@ -8,7 +8,7 @@ if (isset($_POST['apply'])) {
     $person=$_POST['person'];
     $address=$_POST['address'];
 
-    $insert="insert into request(Name, Mobile, Person, Address) values('$name','$number','$person','$address')";
+    $insert="insert into Request(name, mobile, person, address) values('$name','$number','$person','$address')";
     $res=mysqli_query($con,$insert);
 }
 

@@ -1,33 +1,3 @@
-<?php
-
-include 'connection.php';
-
-if (isset($_POST['submit'])){
-    $name=$_POST['name'];
-    $number=$_POST['mobile'];
-    $person=$_POST['person'];
-    $address=$_POST['address'];
-
-    $insert="insert into donate(Name, Mobile, Person, Address) values('$name','$number','$person','$address')";
-    $res=mysqli_query($con,$insert);
-
-}
-?>
-
-<?php
-
-include 'connection.php';
-
-if (isset($_POST['send'])) {
-    $mail=$_POST['gmail'];
-    
-    $insert="insert into mail(Email) values('$mail')";
-    $res=mysqli_query($con,$insert);
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -488,16 +458,7 @@ if (isset($_POST['send'])) {
                                 <a href="contact.html">Contact Us</a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Link</h2>
-                                <a href="">Our Clients</a>
-                                <a href="">Clients Review</a>
-                                <a href="">Ongoing Project</a>
-                                <a href="">Customer Support</a>
-                                <a href="">FAQs</a>
-                            </div>
-                        </div>
+
                         <div class="col-md-6 col-lg-3">
                             <div class="footer-form">
                                 <h2>Stay Updated</h2>
@@ -510,6 +471,11 @@ if (isset($_POST['send'])) {
                                 </form>
                             </div>
                         </div>
+
+                        <div class="col-md-6 col-lg-3">
+                            <img src="img/precautions.png" style=" padding-left:50px;height: 300px;width: 350px; padding-right:50px; padding-bottom:50px;justify-content: center;align-items: center;border-radius: 10px;">
+                        </div>
+
                     </div>
                 </div>
                 <div class="container footer-menu">
@@ -549,3 +515,32 @@ if (isset($_POST['send'])) {
         <script src="js/main.js"></script>
     </body>
 </html>
+
+<?php
+
+include 'connection.php';
+
+if (isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $number=$_POST['mobile'];
+    $person=$_POST['person'];
+    $address=$_POST['address'];
+
+    $insert="insert into Donate(Name, Mobile, Person, Address) values('$name','$number','$person','$address')";
+    $res=mysqli_query($con,$insert);
+
+}
+?>
+
+<?php
+
+include 'connection.php';
+
+if (isset($_POST['send'])) {
+    $mail=$_POST['gmail'];
+    
+    $insert="insert into mail(Email) values('$mail')";
+    $res=mysqli_query($con,$insert);
+}
+
+?>

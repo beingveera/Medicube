@@ -1,21 +1,3 @@
-<?php
-
-include 'connection.php';
-
-if(isset($_POST['connect'])){
-
-    $name=$_POST['name'];
-    $email=$_POST['email'];
-    $subject=$_POST['subject'];
-    $message=$_POST['message'];
-
-    $insert="insert into contact(Name, Email, Subject, Message) values ('$name','$email','$subject','$message')";
-    mysqli_query($con,$insert);
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -296,3 +278,19 @@ if(isset($_POST['connect'])){
 </html>
 
 
+<?php
+
+include 'connection.php';
+
+if(isset($_POST['connect'])){
+
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $subject=$_POST['subject'];
+    $message=$_POST['message'];
+
+    $insert="insert into Contact(cname, mail, subject, message) values ('$name','$email','$subject','$message')";
+    mysqli_query($con,$insert);
+}
+
+?>

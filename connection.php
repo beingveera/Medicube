@@ -4,7 +4,7 @@
 $username= "root";
 $password="";
 $server='localhost';
-$db='medicube';
+$db='3860400_medicube';
 
 $con = mysqli_connect($server,$username,$password,$db);
 
