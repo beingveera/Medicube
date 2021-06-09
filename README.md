@@ -1,1 +1,1 @@
-# Medicube
+# Medicube MediCare
